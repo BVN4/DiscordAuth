@@ -1,0 +1,9 @@
+name: DiscordAuth
+version: '${project.version}'
+main: su.igc.discordauth.Main
+api-version: '1.20'
+prefix: DiscordAuth
+load: STARTUP
+authors: [https://github.com/BVN4]
+description: Player authorization plugin via discord
+website: https://igc.su
