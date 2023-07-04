@@ -9,7 +9,7 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         try {
             initConfig();
-//            loadDiscordBot();
+            initDiscordBot();
 //            loadAccounts();
             Bukkit.getPluginManager().registerEvents(new ServerEvents(), this);
         } catch (Exception e) {
@@ -27,5 +27,13 @@ public final class Main extends JavaPlugin {
         getConfig().options().copyDefaults(true);
         saveConfig();
         Config.init(getConfig());
+    }
+
+    public void initDiscordBot() {
+        try {
+            DiscordBot.init();
+        } catch (Exception e) {
+            Bukkit.getLogger().warning(e.getMessage());
+        }
     }
 }
